@@ -62,10 +62,10 @@ def load_data(city, month, day):
     # convert the Start Time column to datetime
     df['Start Time'] = pd.to_datetime(df['Start Time'])
 
-    # extract month from Start Time to create new columns
+    #this extract month from Start Time to create new columns
     df['month'] = df['Start Time'].dt.month
 
-    # extract a day of week from Start Time to create new columns
+    # this extract a day of week from Start Time to create new columns
     df['day_of_week'] = df['Start Time'].dt.day_name()
 
     # filter by month if the user specify the month name
@@ -206,7 +206,7 @@ def display_raw_data(city):
             break
 
 
-def main_menu():
+def menu():
     while True:
         city, month, day = get_data()
         df = load_data(city, month, day)
@@ -225,4 +225,4 @@ def main_menu():
     print("\nThank you for using this program! Goodbye!\n")
 
 if __name__ == "__main__":
-    main_menu()
+    menu()
