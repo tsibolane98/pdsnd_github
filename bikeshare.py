@@ -206,7 +206,7 @@ def display_raw_data(city):
             break
 
 
-def main_menu():
+def menu():
     while True:
         city, month, day = get_data()
         df = load_data(city, month, day)
@@ -225,4 +225,4 @@ def main_menu():
     print("\nThank you for using this program! Goodbye!\n")
 
 if __name__ == "__main__":
-    main_menu()
+    menu()
